@@ -3,7 +3,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="css/sample.css"/>
+<link rel="stylesheet" type="text/css" href="css/style_sheet.css"/>
+<script type="text/javascript" src="./src/js/Core.js"></script>
+<script type="text/javascript" src="./src/js/LogSpace.js"></script>
+<script type="text/javascript" src="./main.js"></script>
 <title>数当てゲーム（仮称）</title>
 </head>
 
@@ -13,33 +16,31 @@
 
 <!-- Navi -->
 <div id="navi">
-	<div id="navi-img">
-		<!--img-->
-	</div>
-	
-	<div id="navi_text">
-	<p> Hello world !</p> 
-	</div> 
+  <div id="navi-img">
+    <!--img-->
+  </div>
+
+  <div id="navi_text">
+  <p> Hello world !</p> 
+  </div>
 </div>
 
 <!-- Input space -->
 <div id="input">
-	<form method="post" action="">
-		<p>
-			<input type="text" name="number" size="20" maxlength=4 value="xxxx">
-			<input type="button" name="submit" value="submit"> 
-		</p> 
-	</form>
+<form name="form_ask">
+<input type="text" size="20" maxlength=4 value="xxxx">
+<input type="button" value="submit" onclick="ask()">
+</form>
 </div>
 
 <!-- Log space -->
-<div id="log"></div>
+<div id="log_space"></div>
 
 <!-- Assist Space -->
 <div id="assist">
-	<form method="post" action="">
-		<input type="button" name="assist" value="Use assist">
-	</form>
+<form method="post" action="">
+<input type="button" name="assist" value="Use assist">
+</form>
 </div>
 
 </html>

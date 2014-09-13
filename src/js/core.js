@@ -1,5 +1,5 @@
 /******************************************/
-/* Core.js                                */
+/* core.js                                */
 /*                                        */
 /*                                        */
 /******************************************/
@@ -13,6 +13,7 @@ var Core = function ()
  * createAnswer: method of Core            *
  *                                         *
  * --------------------------------------- */
+
 Core.prototype.createAnswer = function ()
 {
   var i, j, rand;
@@ -26,7 +27,7 @@ Core.prototype.createAnswer = function ()
         rand++;
       }
     }
-    this.answer.push();
+    this.answer.push(rand);
   }
   return;
 }
@@ -34,13 +35,12 @@ Core.prototype.createAnswer = function ()
 /* --------------------------------------- *
  * askNumber: method of Core               *
  * @value     [in]: integer array          *
- * @ret_array[out]: return result array    *
  *                                         *
  * --------------------------------------- */
-Core.prototype.askNumber = function (value, ret_array)
+Core.prototype.askNumber = function (value)
 {
   var i, j;
-  ret_array = [];
+  var ret_array = [];
   ret_array.push(0);
   ret_array.push(0);
   if(value.length != 4)
@@ -61,7 +61,7 @@ Core.prototype.askNumber = function (value, ret_array)
       }
       for (j=0; j<4; j++)
       {
-        if (value[i] == ret_array[j])
+        if (value[i] == this.answer[j])
         {
           if (i == j)
           {
